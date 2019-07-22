@@ -1,0 +1,117 @@
+{
+  "groups": [
+    {
+      "name": "suixingpay.async",
+      "type": "com.suixingpay.config.server.config.async.AsyncProperties",
+      "sourceType": "com.suixingpay.config.server.config.async.AsyncProperties"
+    },
+    {
+      "name": "suixingpay.security",
+      "type": "com.suixingpay.config.server.security.BasicAuthorizationProperties",
+      "sourceType": "com.suixingpay.config.server.security.BasicAuthorizationProperties"
+    },
+    {
+      "name": "suixingpay.token",
+      "type": "com.suixingpay.config.server.security.TokenProperties",
+      "sourceType": "com.suixingpay.config.server.security.TokenProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "suixingpay.async.async-uncaught-exception-handler-bean-name",
+      "type": "java.lang.String",
+      "description": "线程池任务执行异常处理策略",
+      "sourceType": "com.suixingpay.config.server.config.async.AsyncProperties"
+    },
+    {
+      "name": "suixingpay.async.core-pool-size",
+      "type": "java.lang.Integer",
+      "description": "核心线程数",
+      "sourceType": "com.suixingpay.config.server.config.async.AsyncProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "suixingpay.async.daemon",
+      "type": "java.lang.Boolean",
+      "description": "是否守护线程",
+      "sourceType": "com.suixingpay.config.server.config.async.AsyncProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "suixingpay.async.keep-alive-seconds",
+      "type": "java.lang.Integer",
+      "description": "线程池维护线程所允许的空闲时间",
+      "sourceType": "com.suixingpay.config.server.config.async.AsyncProperties",
+      "defaultValue": 60
+    },
+    {
+      "name": "suixingpay.async.max-pool-size",
+      "type": "java.lang.Integer",
+      "description": "最大线程数",
+      "sourceType": "com.suixingpay.config.server.config.async.AsyncProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "suixingpay.async.queue-capacity",
+      "type": "java.lang.Integer",
+      "description": "队列长度",
+      "sourceType": "com.suixingpay.config.server.config.async.AsyncProperties",
+      "defaultValue": 1024
+    },
+    {
+      "name": "suixingpay.async.rejected-execution-handler-bean-name",
+      "type": "java.lang.String",
+      "description": "线程池的拒绝策略",
+      "sourceType": "com.suixingpay.config.server.config.async.AsyncProperties"
+    },
+    {
+      "name": "suixingpay.async.thread-name-prefix",
+      "type": "java.lang.String",
+      "description": "线程名称前缀",
+      "sourceType": "com.suixingpay.config.server.config.async.AsyncProperties",
+      "defaultValue": "AsyncExecutor-"
+    },
+    {
+      "name": "suixingpay.security.password",
+      "type": "java.lang.String",
+      "description": "密码",
+      "sourceType": "com.suixingpay.config.server.security.BasicAuthorizationProperties"
+    },
+    {
+      "name": "suixingpay.security.path-patterns",
+      "type": "java.lang.String[]",
+      "description": "拦截路径",
+      "sourceType": "com.suixingpay.config.server.security.BasicAuthorizationProperties",
+      "defaultValue": [
+        "\/**"
+      ]
+    },
+    {
+      "name": "suixingpay.security.username",
+      "type": "java.lang.String",
+      "description": "用户名",
+      "sourceType": "com.suixingpay.config.server.security.BasicAuthorizationProperties"
+    },
+    {
+      "name": "suixingpay.token.ignore-urls",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.suixingpay.config.server.security.TokenProperties"
+    },
+    {
+      "name": "suixingpay.token.path-patterns",
+      "type": "java.lang.String[]",
+      "sourceType": "com.suixingpay.config.server.security.TokenProperties",
+      "defaultValue": [
+        "\/**"
+      ]
+    },
+    {
+      "name": "suixingpay.token.timeout",
+      "type": "java.lang.Integer",
+      "description": "token过期时间，单位秒",
+      "sourceType": "com.suixingpay.config.server.security.TokenProperties",
+      "defaultValue": 0
+    }
+  ],
+  "hints": []
+}

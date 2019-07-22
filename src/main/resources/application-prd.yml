@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://rm-uf64n5y6yet9b22s1.mysql.rds.aliyuncs.com/kj_config?useSSL=false&serverTimezone=GMT%2B8
+    username: kj_config
+    password: Kjdow@123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    init-sql: '"SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci;"'
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 100
+
+  redis:
+    host: 172.19.195.151
+    password: foobared.123
+    port: 6379
+    jedis:
+      pool:
+        max-wait: 1500ms
+        max-active: 2048
+        min-idle: 20
+        max-idle: 200
+
+suixingpay:
+  autoload:
+    cache:
+      enable: true
+  security: # 客户端安全校验用户名和密码
+    username: admin
+    password: 123456

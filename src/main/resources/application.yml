@@ -1,0 +1,52 @@
+spring:
+  mvc:
+    favicon:
+      enabled: false
+  application:
+    name: kj-config-server
+  profiles:
+    active: ${profile:dev}
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+server:
+  port: ${port:8080}
+
+management:
+  server:
+    servlet:
+      context-path: /ops
+
+#mybatis see org.mybatis.spring.boot.autoconfigure.MybatisProperties
+#mybatis.type-handlers-package=
+mybatis:
+  configuration:
+    cache-enabled: false
+    default-statement-timeout: 5
+  mapper-locations: classpath:mybatis/*.xml
+
+suixingpay:
+  security:
+    path-patterns:
+    - /open/**
+  token:
+    path-patterns:
+    - /**
+    ignore-urls:
+    - /auth/login
+    - /auth/logout
+    - /open/**
+    - /captcha/**
+    - /bootstrap/**
+    - /js/**
+    - /css/**
+    - /images/**
+    - /**/favicon.ico
+    - /webjars/**
+    - /swagger-ui.html
+    - /v2/api-docs
+    - /configuration/**
+    - /swagger-resources/**
+    - "*.html"
+    - /error
